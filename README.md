@@ -1,78 +1,65 @@
-Home Page
-![image](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/e1dfd40a-1dda-43ea-8f62-e839aadd30f5)
+# Role-Based OAuth Dashboard
 
-Login page
-![image](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/9f0e2fad-b380-4f1c-a622-1b45ac9702f3)
+A modern authentication and dashboard system built with Next.js 14, featuring role-based access control, OAuth integration, and a sleek user interface.
 
-Register Page
-![image](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/91375ff6-d19d-47c3-be3e-d8893a6eff66)
+![Dashboard Overview](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/e1dfd40a-1dda-43ea-8f62-e839aadd30f5)
 
-Settings Page
-![image](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/91663aaf-f2e1-4aa4-87fe-3b4fde78817d)
+## Features
 
-Description: <br/>
-Welcome to our Next.js Authentication Guide, a comprehensive resource designed to empower developers with the tools and knowledge needed to implement a robust authentication system in their Next.js applications. Leveraging NextAuth.js, this guide covers everything from setting up basic login mechanisms to implementing advanced security features.
+- 🔐 **Advanced Authentication**
 
-> > -User Data Get
-> > Server: const user = await currentUser();
-> > Client: const user = useCurrentUser();
+  - Email/Password authentication
+  - OAuth support (Google, GitHub)
+  - Two-factor authentication (2FA)
+  - Email verification
+  - Password reset functionality
 
-Key Features:
+- 👥 **Role-Based Access Control**
 
-- 🔐 Next-auth v5 (Auth.js)
-- 🚀 Next.js 14 with server actions
-- 🔑 Credentials Provider
-- 🌐 OAuth Provider (Social login with Google & GitHub)
-- 🔒 Forgot password functionality
-- ✉️ Email verification
-- 📱 Two factor verification
-- 👥 User roles (Admin & User)
-- 🔓 Login component (Opens in redirect or modal)
-- 📝 Register component
-- 🤔 Forgot password component
-- ✅ Verification component
-- ⚠️ Error component
-- 🔘 Login button
-- 🚪 Logout button
-- 🚧 Role Gate
-- 🔍 Exploring next.js middleware
-- 📈 Extending & Exploring next-auth session
-- 🔄 Exploring next-auth callbacks
-- 👤 useCurrentUser hook
-- 🛂 useRole hook
-- 🧑 currentUser utility
-- 👮 currentRole utility
-- 🖥️ Example with server component
-- 💻 Example with client component
-- 👑 Render content for admins using RoleGate component
-- 🛡️ Protect API Routes for admins only
-- 🔐 Protect Server Actions for admins only
-- 📧 Change email with new verification in Settings page
-- 🔑 Change password with old password confirmation in Settings page
-- 🔔 Enable/disable two-factor auth in Settings page
-- 🔄 Change user role in Settings page (for development purposes only)
+  - User roles (Admin, User)
+  - Protected routes
+  - Role-specific content rendering
 
-### Prerequisites
+- 💻 **Modern Dashboard**
 
-**Node version 18.7.x**
+  - Responsive layout
+  - Dark/Light theme support
+  - Command palette (⌘K)
+  - Breadcrumb navigation
+  - Collapsible sidebar
 
-### Cloning the repository
+- 🛠️ **Technical Features**
+  - Server and client components
+  - API route handlers
+  - Database integration
+  - Form validation
+  - Error handling
+  - Toast notifications
 
-```shell
-git clone https://github.com/CodeMaster17/role-based-authentication-Authjs.git
-```
+## Tech Stack
 
-### Install packages
+- **Framework**: Next.js 14
+- **Authentication**: NextAuth.js v5
+- **Database**: PostgreSQL + Prisma ORM
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Email Service**: Resend
+- **Form Handling**: React Hook Form + Zod
+- **State Management**: React Context
+- **Command Palette**: kbar
 
-```shell
-npm i
-```
+## Prerequisites
 
-### Setup .env file
+- Node.js 18+
+- PostgreSQL
+- npm/yarn
+- Git
+
+## Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
 
 ```js
 DATABASE_URL=
-DIRECT_URL=
 
 AUTH_SECRET=
 
@@ -87,23 +74,72 @@ RESEND_API_KEY=
 NEXT_PUBLIC_APP_URL=
 ```
 
-### Setup Prisma
+## Installation
+
+1. Clone the repository:
+
+```shell
+git clone https://github.com/ataullah1/Role-Based-OAuth-Dashboard.git
+```
+
+2. Install dependencies:
+
+```shell
+cd Role-Based-OAuth-Dashboard
+npm install
+```
+
+3. Set up the database:
 
 ```shell
 npx prisma generate
 npx prisma db push
 ```
 
-### Start the app
+4. Start the development server:
 
 ```shell
 npm run dev
 ```
 
-## Available commands
+## Available Commands
 
-Running commands with npm `npm run [command]`
+| Command       | Description               |
+| ------------- | ------------------------- |
+| `dev`         | Starts development server |
+| `build`       | Creates production build  |
+| `start`       | Starts production server  |
+| `lint`        | Runs linter               |
+| `postinstall` | Generates Prisma client   |
 
-| command | description                              |
-| :------ | :--------------------------------------- |
-| `dev`   | Starts a development instance of the app |
+## Project Structure
+
+```
+├── app/                  # App router pages
+├── components/           # Reusable components
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+├── prisma/              # Database schema and migrations
+└── public/              # Static assets
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Prisma](https://www.prisma.io/)
+
+## Contact
+
+Ataullah - [GitHub](https://github.com/ataullah1)
+
+Project Link: [https://github.com/ataullah1/Role-Based-OAuth-Dashboard](https://github.com/ataullah1/Role-Based-OAuth-Dashboard)
