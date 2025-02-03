@@ -1,4 +1,3 @@
-
 Home Page
 ![image](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/e1dfd40a-1dda-43ea-8f62-e839aadd30f5)
 
@@ -12,9 +11,14 @@ Settings Page
 ![image](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/91663aaf-f2e1-4aa4-87fe-3b4fde78817d)
 
 Description: <br/>
-Welcome to our Next.js Authentication Guide, a comprehensive resource designed to empower developers with the tools and knowledge needed to implement a robust authentication system in their Next.js applications. Leveraging NextAuth.js, this guide covers everything from setting up basic login mechanisms to implementing advanced security features. 
+Welcome to our Next.js Authentication Guide, a comprehensive resource designed to empower developers with the tools and knowledge needed to implement a robust authentication system in their Next.js applications. Leveraging NextAuth.js, this guide covers everything from setting up basic login mechanisms to implementing advanced security features.
+
+> > -User Data Get
+> > Server: const user = await currentUser();
+> > Client: const user = useCurrentUser();
 
 Key Features:
+
 - 🔐 Next-auth v5 (Auth.js)
 - 🚀 Next.js 14 with server actions
 - 🔑 Credentials Provider
@@ -66,7 +70,6 @@ npm i
 
 ### Setup .env file
 
-
 ```js
 DATABASE_URL=
 DIRECT_URL=
@@ -85,6 +88,7 @@ NEXT_PUBLIC_APP_URL=
 ```
 
 ### Setup Prisma
+
 ```shell
 npx prisma generate
 npx prisma db push
@@ -100,6 +104,6 @@ npm run dev
 
 Running commands with npm `npm run [command]`
 
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+| command | description                              |
+| :------ | :--------------------------------------- |
+| `dev`   | Starts a development instance of the app |
