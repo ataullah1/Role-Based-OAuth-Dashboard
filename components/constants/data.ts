@@ -11,30 +11,30 @@ export const navItems: NavItem[] = [
   },
 
   {
-    title: "Members",
-    url: "/dashboard/members",
-    icon: "user",
+    title: "Server",
+    url: "/dashboard/server",
+    icon: "server",
     shortcut: ["m", "m"],
     isActive: false,
     items: [], // No child items
   },
   {
-    title: "Panel Management",
+    title: "Client",
     shortcut: ["p", "p"],
-    url: "/dashboard/panel-management",
+    url: "/dashboard/client",
     icon: "Boxes",
   },
   {
-    title: "Notice Board",
-    url: "/dashboard/notice",
+    title: "Admin",
+    url: "/dashboard/admin",
     icon: "kanban",
     shortcut: ["k", "k"],
     isActive: false,
     items: [], // No child items
   },
   {
-    title: "Audit Logs",
-    url: "/dashboard/audit-logs",
+    title: "Settings",
+    url: "/dashboard/settings",
     icon: "Logs",
     shortcut: ["r", "r"],
     isActive: false,

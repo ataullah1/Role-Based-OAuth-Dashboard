@@ -25,6 +25,7 @@ import {
   MoreVertical,
   Pizza,
   Plus,
+  Server,
   Settings,
   Shield,
   SunMedium,
@@ -71,6 +72,7 @@ export const Icons = {
   laptop: Laptop,
   Boxes: Boxes,
   shield: Shield,
+  server: Server,
   Logs: Logs,
   google: ({ ...props }: LucideProps) => (
     <svg
