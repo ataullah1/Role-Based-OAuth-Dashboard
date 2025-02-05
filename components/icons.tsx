@@ -36,6 +36,14 @@ import {
   UserPen,
   UserX2Icon,
   X,
+  Newspaper,
+  FolderTree,
+  Users,
+  MessageSquare,
+  Image as ImageIcon,
+  BarChart,
+  BellRing,
+  DollarSign,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -57,7 +65,7 @@ export const Icons = {
   page: File,
   userPen: UserPen,
   user2: UserCircle2Icon,
-  media: Image,
+  media: ImageIcon,
   settings: Settings,
   billing: CreditCard,
   ellipsis: MoreVertical,
@@ -121,4 +129,11 @@ export const Icons = {
   ),
   twitter: Twitter,
   check: Check,
+  news: Newspaper,
+  category: FolderTree,
+  users: Users,
+  comments: MessageSquare,
+  analytics: BarChart,
+  ads: DollarSign,
+  bell: BellRing,
 };

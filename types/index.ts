@@ -2,13 +2,13 @@ import { Icons } from "@/components/icons";
 
 export interface NavItem {
   title: string;
-  url: string;
-  disabled?: boolean;
-  external?: boolean;
-  shortcut?: [string, string];
+  url?: string;
   icon?: keyof typeof Icons;
-  label?: string;
-  description?: string;
+  shortcut?: string[];
   isActive?: boolean;
-  items?: NavItem[];
+  items?: {
+    title: string;
+    url: string;
+    shortcut?: string[];
+  }[];
 }

@@ -16,9 +16,12 @@ import { navItems } from "../constants/data";
 export default function KBar({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
-  const navigateTo = (url: string) => {
-    router.push(url);
-  };
+  const navigateTo = React.useCallback(
+    (url: string) => {
+      router.push(url);
+    },
+    [router]
+  );
 
   // These action are for the navigation
   const actions = useMemo(
@@ -34,7 +37,7 @@ export default function KBar({ children }: { children: React.ReactNode }) {
                 keywords: navItem.title.toLowerCase(),
                 section: "Navigation",
                 subtitle: `Go to ${navItem.title}`,
-                perform: () => navigateTo(navItem.url),
+                perform: () => navItem.url && navigateTo(navItem.url),
               }
             : null;
 
@@ -53,7 +56,7 @@ export default function KBar({ children }: { children: React.ReactNode }) {
         // Return only valid actions (ignoring null base actions for containers)
         return baseAction ? [baseAction, ...childActions] : childActions;
       }),
-    []
+    [navigateTo]
   );
 
   return (

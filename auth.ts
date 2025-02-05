@@ -13,7 +13,6 @@ export const {
   auth,
   signIn,
   signOut,
-  update,
 } = NextAuth({
   // * This is for solving errors when using linkAccount feature
   pages: {
@@ -37,10 +36,23 @@ export const {
       // Allow OAuth without email verification
       if (account?.provider !== "credentials") return true;
 
+      // Ensure user.id is defined
+      if (!user.id) {
+        console.log("User ID missing");
+        return false;
+      }
+
       const existingUser = await getUserById(user.id);
 
-      // Prevent sign in without email verification
-      if (!existingUser?.emailVerified) return false;
+      if (!existingUser?.emailVerified) {
+        console.log("Email not verified");
+        return false;
+      }
+
+      if (existingUser.role === UserRole.USER) {
+        console.log("User role not authorized");
+        return true;
+      }
 
       // * Prevent sign in without two factor confirmation  (99)
       if (existingUser.isTwoFactorEnabled) {
@@ -48,7 +60,10 @@ export const {
           existingUser.id
         );
 
-        if (!twoFactorConfirmation) return false;
+        if (!twoFactorConfirmation) {
+          console.log("2FA required but not confirmed");
+          return false;
+        }
 
         // Delete two factor confirmation for next sign in
         await db.twoFactorConfirmation.delete({

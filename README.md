@@ -1,8 +1,8 @@
-# Role-Based OAuth Dashboard
+# News Protal With Nextjs Prisma
 
 A modern authentication and dashboard system built with Next.js 14, featuring role-based access control, OAuth integration, and a sleek user interface.
 
-![Dashboard Overview](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/e1dfd40a-1dda-43ea-8f62-e839aadd30f5)
+![Dashboard Overview](https://github.com/CodeMaster17/role-based-authentication-Authjs/assets/96763776/e1dfd40a-1dda-43ea-8f62-e839aadd)
 
 ## Features
 
@@ -79,13 +79,13 @@ NEXT_PUBLIC_APP_URL=
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/ataullah1/Role-Based-OAuth-Dashboard.git
+git clone https://github.com/ataullah1/News-Protal-With-Nextjs-Prisma.git
 ```
 
 2. Install dependencies:
 
 ```shell
-cd Role-Based-OAuth-Dashboard
+cd News-Protal-With-Nextjs-Prisma
 npm install
 ```
 
@@ -142,4 +142,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Ataullah - [GitHub](https://github.com/ataullah1)
 
-Project Link: [https://github.com/ataullah1/Role-Based-OAuth-Dashboard](https://github.com/ataullah1/Role-Based-OAuth-Dashboard)
+Project Link: [https://github.com/ataullah1/News-Protal-With-Nextjs-Prisma.git](https://github.com/ataullah1/News-Protal-With-Nextjs-Prisma.git)

@@ -16,9 +16,9 @@ const ProtectedLayout = async ({ children }: ProtectedLayoutProps) => {
   }
   return (
     <KBar>
-      <SidebarProvider defaultOpen={false}>
+      <SidebarProvider defaultOpen={true}>
         <AppSidebar user={user} />
-        <SidebarInset className="px-3">
+        <SidebarInset className="">
           <Header />
           {/* page main content */}
           {children}

@@ -7,6 +7,7 @@ import { db } from "@/lib/database.connection";
 import { getUserByEmail } from "@/lib/actions/user.action";
 import { generateVerificationToken } from "@/lib/token";
 import { sendVerificationEmail } from "@/lib/mail";
+import { UserRole } from "@prisma/client";
 
 export const register = async (values: z.infer<typeof RegisterSchema>) => {
   // * check and store user in database
@@ -33,6 +34,7 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
       name,
       email,
       password: hashedPassword,
+      role: UserRole.USER, // Default role
     },
   });
 

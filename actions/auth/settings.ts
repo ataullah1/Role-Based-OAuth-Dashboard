@@ -1,5 +1,4 @@
 "use server";
-import { update } from "@/auth";
 import { getUserByEmail, getUserById } from "@/lib/actions/user.action";
 import { currentUser } from "@/lib/auth";
 import { db } from "@/lib/database.connection";
@@ -8,6 +7,7 @@ import { generateVerificationToken } from "@/lib/token";
 import { SettingsSchema } from "@/schema";
 import bcrypt from "bcryptjs";
 import * as z from "zod";
+import { getSession } from "next-auth/react";
 
 export const settings = async (values: z.infer<typeof SettingsSchema>) => {
   const user = await currentUser();
@@ -72,14 +72,7 @@ export const settings = async (values: z.infer<typeof SettingsSchema>) => {
   });
 
   //   updating in the session
-  update({
-    user: {
-      name: updatedUser.name,
-      email: updatedUser.email,
-      isTwoFactorEnabled: updatedUser.isTwoFactorEnabled,
-      role: updatedUser.role,
-    },
-  });
+  await getSession();
 
   return { success: "Settings Updated!" };
 };
